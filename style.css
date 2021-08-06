@@ -1,0 +1,266 @@
+/* 
+---- this type comments for main section
+**** this type comments for a section inside the main section
+
+> Typography - all the fonts related tags keep in one place
+> Common tags are basically used more than one times
+> Extra content added after main section and ended before footer section
+> For social sites icon used fontawsome icons, that's why deleted the social   icons folder from the images folder
+> Responsive area added after the footer area, means last in the style.css page
+*/
+
+/*----------------------------------------------------------------
+                        typography starts 
+----------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 28px;
+}
+p {
+  font-weight: 200;
+  font-size: 16px;
+  color: #6c6c6c;
+}
+/*----------------------------------------------------------------
+                        typography ends
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+                        common tag starts
+----------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  font-family: Poppins;
+}
+.container {
+  margin: auto;
+  width: 80%;
+}
+.btn {
+  background-color: #e02c6d;
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn:hover {
+  background-color: #2d25a0;
+  transition: 0.7s ease-in-out;
+  border: 1px solid white;
+}
+/*----------------------------------------------------------------
+                        common tag ends 
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+                        header-area starts 
+----------------------------------------------------------------*/
+
+/****************************************************************
+                         navbar area starts 
+*****************************************************************/
+.header-area {
+  overflow: hidden;
+  background-color: #2d25a0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.left-side ul {
+  list-style: none;
+  text-align: center;
+}
+.left-side ul li {
+  display: inline;
+}
+.left-side ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border: 0.5px solid transparent;
+}
+.left-side ul li a:hover {
+  border: 0.5px solid white;
+  transition: 1s ease-in-out;
+}
+.right-side {
+  color: white;
+}
+.right-side .fa-sign-in-alt {
+  margin-right: 5px;
+}
+/****************************************************************
+                         navbar area ends 
+*****************************************************************/
+
+/****************************************************************
+                         intro area starts 
+*****************************************************************/
+.intro-area {
+  margin-bottom: 130px;
+  margin-top: 50px;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+.intro-area .description h1 {
+  font-size: 50px;
+  color: white;
+}
+.btn i {
+  margin: 8px;
+}
+.intro-area .image-area img {
+  animation: ud 2s linear infinite alternate;
+  width: 100%;
+  height: auto;
+}
+@keyframes ud {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+/****************************************************************
+                         intro area ends
+*****************************************************************/
+
+/*----------------------------------------------------------------
+                        header-area ends 
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+                        main - area starts 
+----------------------------------------------------------------*/
+
+/*****************************************************************
+                section - player list area starts
+*****************************************************************/
+.player-list {
+  padding: 50px 120px;
+  background-color: #ffffffb9;
+}
+.plist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.plist div {
+  box-shadow: 2px 2px 20px rgb(214, 210, 210);
+  background-color: white;
+  padding: 15px;
+  margin: 14px 18px;
+}
+
+.plist img {
+  width: 100%;
+  margin-bottom: -15px;
+}
+.plist img:hover {
+  height: auto;
+}
+/*****************************************************************
+                section - player list area ends
+******************************************************************/
+
+/*****************************************************************
+                section - highlight area starts
+******************************************************************/
+
+.highlight {
+  padding: 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+.highlight div {
+  padding: 30px;
+}
+
+.highlight-area .image-area img {
+  width: 567px;
+  height: 427px;
+}
+
+/*****************************************************************
+                section - highlight area ends
+******************************************************************/
+/*----------------------------------------------------------------
+                        main-area ends 
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+                        extra content goes here 
+----------------------------------------------------------------*/
+/* starts */
+/* ends */
+/*----------------------------------------------------------------
+                        extra content end
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+                        footer-area starts 
+----------------------------------------------------------------*/
+.footer-area {
+  padding-top: 140px;
+  padding-bottom: 40px;
+}
+.footer {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.footer-area img {
+  width: 480px;
+  height: 110px;
+}
+.social-sites {
+  margin: 0;
+}
+.footer-area .social-sites ul {
+  list-style: none;
+  text-align: center;
+}
+.footer-area .social-sites ul li {
+  display: inline;
+  margin: 5px;
+}
+.footer-area .social-sites a {
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+  padding: 10px;
+  background-color: #d5d7db;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.footer-area .social-sites a:hover {
+  color: rgb(40, 40, 134);
+}
+.copyright {
+  margin-top: 30px;
+  margin-left: 40px;
+  text-align: center;
+}
+/*----------------------------------------------------------------
+                        footer-area ends 
+----------------------------------------------------------------*/ ;
