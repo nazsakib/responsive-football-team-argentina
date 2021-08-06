@@ -2,11 +2,14 @@
 ---- this type comments for main section
 **** this type comments for a section inside the main section
 
-> Typography - all the fonts related tags keep in one place
-> Common tags are basically used more than one times
-> Extra content added after main section and ended before footer section
-> For social sites icon used fontawsome icons, that's why deleted the social   icons folder from the images folder
-> Responsive area added after the footer area, means last in the style.css page
+
+* Made the navigation bar but in responsive it will be hidden
+* Typography - all the fonts related tags kept in one place
+* Common tags are basically used more than one times
+* Extra content added after main section and ended before footer section
+* Extra two sections are:- 1. Highligh section and 2. Sponsors section
+* For social sites icon used fontawsome icons, that's why deleted the social   icons folder from the images folder
+* Responsive area added after the footer area, means last in the style.css page
 */
 
 /*----------------------------------------------------------------
@@ -91,9 +94,12 @@ body {
   color: white;
   border: 0.5px solid transparent;
 }
+.left-side .active {
+  background-color: #e02c6d;
+}
 .left-side ul li a:hover {
-  border: 0.5px solid white;
-  transition: 1s ease-in-out;
+  background-color: #e02c6d;
+  transition: 0.5s ease-in-out;
 }
 .right-side {
   color: white;
@@ -140,7 +146,6 @@ body {
 /****************************************************************
                          intro area ends
 *****************************************************************/
-
 /*----------------------------------------------------------------
                         header-area ends 
 ----------------------------------------------------------------*/
@@ -148,7 +153,6 @@ body {
 /*----------------------------------------------------------------
                         main - area starts 
 ----------------------------------------------------------------*/
-
 /*****************************************************************
                 section - player list area starts
 *****************************************************************/
@@ -188,8 +192,9 @@ body {
   padding: 20px 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
+  justify-items: center;
 }
 .highlight div {
   padding: 30px;
@@ -211,6 +216,91 @@ body {
                         extra content goes here 
 ----------------------------------------------------------------*/
 /* starts */
+
+/* 1. */
+.news-area {
+  padding: 50px 0;
+  background-color: #e3e9ee;
+}
+.news {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.news-area h1 {
+  text-align: center;
+}
+.news-area p {
+  color: black;
+  font-wight: bold;
+}
+.heading-span {
+  color: blue;
+}
+.news .box {
+  box-shadow: 2px 2px 20px gray;
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px;
+}
+.news-area img {
+  width: 100%;
+  border-radius: 12px;
+  height: 400px;
+}
+.box {
+  overflow: hidden;
+  position: relative;
+}
+.news-detail {
+  display: none;
+  position: absolute;
+  width: 90%;
+  top: 0px;
+}
+.box:hover .news-detail {
+  display: block;
+  color: white;
+  font-size: 30px;
+  transition: transform 0.5s linear;
+}
+.box:hover img {
+  opacity: 0.7;
+}
+.box:hover .photo {
+  transform: scale(1.5);
+  transition: transform 1s linear;
+}
+
+/* 2 */
+.sponsors {
+  padding: 80px 0;
+  background-color: whitesmoke;
+}
+.sponsors .heading {
+  text-align: center;
+}
+.sponsors-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 100px;
+}
+.sponsors-logos img {
+  width: 50%;
+  padding: 20px;
+}
+.sponsors-logos img:hover {
+  opacity: 0.5;
+  transform: scale(1.7);
+  transition: transform 0.5s ease-in-out;
+}
 /* ends */
 /*----------------------------------------------------------------
                         extra content end
@@ -261,6 +351,7 @@ body {
   margin-left: 40px;
   text-align: center;
 }
+
 /*----------------------------------------------------------------
                         footer-area ends 
 ----------------------------------------------------------------*/
@@ -282,12 +373,16 @@ body {
   .player-list {
     padding: 50px 0;
   }
-  .player-list .plist {
+  .plist {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-
+  .news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   .highlight {
     padding: 40px 0;
     display: flex;
@@ -295,6 +390,9 @@ body {
   }
   .highlight-area .image-area img {
     width: 100%;
+  }
+  .sponsors-logos {
+    padding: 0;
   }
 }
 /*----------------------------------------------------------------
